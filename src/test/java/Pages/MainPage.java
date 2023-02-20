@@ -11,10 +11,10 @@ public class MainPage {
     private By signInPersonalAccountButton = By.xpath(".//div/header/nav/a/p[text()='Личный Кабинет']");
     private By bunsSection = By.xpath(".//span[text()='Булки']");
     private By sauceSection = By.xpath(".//span[text()='Соусы']");
-    private By bunsSectionSelected = By.xpath(".//section[1]/div[1]/div[1]");
-    private By sauceSectionSelected = By.xpath(".//section[1]/div[1]/div[2]");
+    private By bunsSectionSelected = By.xpath(".//span[text()='Булки']/parent::div");
+    private By sauceSectionSelected = By.xpath(".//span[text()='Соусы']/parent::div");
     private By fillingsSection = By.xpath(".//span[text()='Начинки']");
-    private By fillingsSectionSelected = By.xpath(".//section[1]/div[1]/div[3]");
+    private By fillingsSectionSelected = By.xpath(".//span[text()='Начинки']/parent::div");
     private By enterInAccountButton = By.xpath(".//button[text()='Войти в аккаунт']");
     private By constructorButton = By.xpath(".//p[text()='Конструктор']");
     private By logo = By.className("AppHeader_header__logo__2D0X2");

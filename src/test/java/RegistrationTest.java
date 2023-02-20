@@ -19,6 +19,8 @@ public class RegistrationTest {
     @Before
     public void before(){
         System.setProperty("webdriver.chrome.driver","/home/zaymer/WebDriver/bin/chromedriver");
+        ChromeOptions options = new ChromeOptions();
+        driver = new ChromeDriver(options);
     };
       @After
      public void teardown() {
@@ -28,8 +30,6 @@ public class RegistrationTest {
 
     @Test
     public void checkSuccessfulRegistration(){
-        ChromeOptions options = new ChromeOptions();
-        driver = new ChromeDriver(options);
         driver.get("https://stellarburgers.nomoreparties.site/");
         name = RandomStringUtils.randomAlphabetic(10);
         email = RandomStringUtils.randomAlphanumeric(10) + "@yandex.ru";
@@ -46,8 +46,6 @@ public class RegistrationTest {
 
     @Test
     public void checkRegistrationWithIncorrectPassword(){
-        ChromeOptions options = new ChromeOptions();
-        driver = new ChromeDriver(options);
         driver.get("https://stellarburgers.nomoreparties.site/");
         name = RandomStringUtils.randomAlphabetic(10);
         email = RandomStringUtils.randomAlphanumeric(10) + "@yandex.ru";

@@ -9,7 +9,6 @@ import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class LoginTest {
     private WebDriver driver;
@@ -18,6 +17,8 @@ public class LoginTest {
     @Before
     public void before(){
         System.setProperty("webdriver.chrome.driver","/home/zaymer/WebDriver/bin/chromedriver");
+        ChromeOptions options = new ChromeOptions();
+        driver = new ChromeDriver(options);
     };
 
     @After
@@ -27,8 +28,6 @@ public class LoginTest {
 
     @Test
     public void loginByEnterInAccountButton() {
-        ChromeOptions options = new ChromeOptions();
-        driver = new ChromeDriver(options);
         driver.get("https://stellarburgers.nomoreparties.site/");
         MainPage mainPage = new MainPage(driver);
         LoginPage loginPage = new LoginPage(driver);
@@ -41,8 +40,6 @@ public class LoginTest {
 
     @Test
     public void loginByPersonalAccountButton() {
-        ChromeOptions options = new ChromeOptions();
-        driver = new ChromeDriver(options);
         driver.get("https://stellarburgers.nomoreparties.site/");
         MainPage mainPage = new MainPage(driver);
         LoginPage loginPage = new LoginPage(driver);
@@ -55,8 +52,6 @@ public class LoginTest {
 
     @Test
     public void loginByEnterButtonOnRegistrationPage() {
-        ChromeOptions options = new ChromeOptions();
-        driver = new ChromeDriver(options);
         driver.get("https://stellarburgers.nomoreparties.site/");
         MainPage mainPage = new MainPage(driver);
         LoginPage loginPage = new LoginPage(driver);
@@ -72,8 +67,6 @@ public class LoginTest {
 
     @Test
     public void loginByEnterButtonOnPasswordRecoveryPage() {
-        ChromeOptions options = new ChromeOptions();
-        driver = new ChromeDriver(options);
         driver.get("https://stellarburgers.nomoreparties.site/");
         MainPage mainPage = new MainPage(driver);
         LoginPage loginPage = new LoginPage(driver);

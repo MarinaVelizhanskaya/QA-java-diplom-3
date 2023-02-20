@@ -19,6 +19,8 @@ public class PersonalAccountTest {
     @Before
     public void before(){
         System.setProperty("webdriver.chrome.driver","/home/zaymer/WebDriver/bin/chromedriver");
+        ChromeOptions options = new ChromeOptions();
+        driver = new ChromeDriver(options);
     };
 
     @After
@@ -28,8 +30,6 @@ public class PersonalAccountTest {
 
     @Test
     public void returnOnMainPageByConstructorClick(){
-        ChromeOptions options = new ChromeOptions();
-        driver = new ChromeDriver(options);
         driver.get("https://stellarburgers.nomoreparties.site/");
         MainPage mainPage = new MainPage(driver);
         LoginPage loginPage = new LoginPage(driver);
@@ -43,8 +43,6 @@ public class PersonalAccountTest {
 
     @Test
     public void returnOnMainPageByLogoClick(){
-        ChromeOptions options = new ChromeOptions();
-        driver = new ChromeDriver(options);
         driver.get("https://stellarburgers.nomoreparties.site/");
         MainPage mainPage = new MainPage(driver);
         LoginPage loginPage = new LoginPage(driver);
@@ -58,8 +56,6 @@ public class PersonalAccountTest {
 
     @Test
     public void returnOnMainPageByExitButton(){
-        ChromeOptions options = new ChromeOptions();
-        driver = new ChromeDriver(options);
         driver.get("https://stellarburgers.nomoreparties.site/");
         MainPage mainPage = new MainPage(driver);
         LoginPage loginPage = new LoginPage(driver);

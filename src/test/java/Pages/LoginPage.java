@@ -8,7 +8,7 @@ public class LoginPage {
     public LoginPage(WebDriver driver){
         this.driver = driver;
     }
-    private By registerButton = By.xpath("//div/main/div/div/p[1]/a[text()='Зарегистрироваться']");
+    private By registerButton = By.xpath(".//a[text()='Зарегистрироваться']");
     private By passwordRecoveryButton = By.className("Auth_link__1fOlj");
     private By enterButton = By.xpath(".//button[@class='button_button__33qZ0 button_button_type_primary__1O7Bx " +
             "button_button_size_medium__3zxIa']");
